@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+description = 'Console application to draw 2D canvas, line, rectangle and fill spaces or colors'
+
+mainClassName = 'com/vlr/tech/app/ConsolePainter'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = "ConsolePainter"
+    version = "0.1.0"
+    manifest {
+        attributes 'Implementation-Title': 'Console Painter',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.vlr.tech.app.ConsolePainter'
+    }
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+}
